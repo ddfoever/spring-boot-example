@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  
+  
+person:
+  name: Allen
+  age: 18
+  
+  
+#mysql conn
+spring:
+ datasource:
+   url: jdbc:mysql://127.0.0.1:3306/test
+   username: root
+   password: root
+   driver-class-name: com.mysql.jdbc.Driver
+   
+mybatis:
+ type-aliases-package: com.imooc.entity
+ mapper-locations: classpath:mybatis/mapper/*.xml
+ config-locations: classpath:mybatis/mybatis-config.xml
+    
+    

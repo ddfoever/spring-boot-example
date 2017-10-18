@@ -1,0 +1,87 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>com.imooc.demo</groupId>
+  <artifactId>SpringBootDemo</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <name>SpringBootDemo Maven Webapp</name>
+  
+  <url>http://maven.apache.org</url>
+  
+  <!-- Inherit defaults from spring boot  -->
+  
+  <parent>
+  	<groupId>org.springframework.boot</groupId>
+  	<artifactId>spring-boot-starter-parent</artifactId>
+  	<version>1.4.0.RELEASE</version>
+  	<relativePath/>
+  </parent>
+  
+  <properties>
+  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  	<java.version>1.7</java.version>
+  </properties>
+  
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- spring boot jar -->
+    <dependency>
+    	<groupId>org.springframework.boot</groupId>
+    	<artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <!-- 单元测试 -->
+      <dependency>
+    	<groupId>org.springframework.boot</groupId>
+    	<artifactId>spring-boot-starter-test</artifactId>
+    </dependency>
+    <!-- mysql dependency -->
+    <dependency>
+    	<groupId>mysql</groupId>
+    	<artifactId>mysql-connector-java</artifactId>
+    	<version>5.1.42</version>
+    </dependency>
+    <!-- mybatis dependency -->
+    <dependency>
+    	<groupId>org.mybatis.spring.boot</groupId>
+    	<artifactId>mybatis-spring-boot-starter</artifactId>
+    	<version>1.1.1</version>
+    </dependency>
+    <!-- db connection pool -->
+    <dependency>
+    	<groupId>com.alibaba</groupId>
+    	<artifactId>druid-spring-boot-starter</artifactId>
+    	<version>1.1.4</version>
+    </dependency>
+    <!-- hot fix 该模块在完整的打包环境下运行的时候会被禁用。如果你使用java -jar启动应用或者用一个特定的classloader启动，它会认为这是一个“生产环境”。-->
+    <dependency>
+    	<groupId>org.springframework.boot</groupId>
+    	<artifactId>spring-boot-devtools</artifactId>
+    	<optional>true</optional>
+    </dependency>
+    
+  </dependencies>
+  <build>
+    <finalName>SpringBootDemo</finalName>
+    <defaultGoal>compile</defaultGoal>
+     <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+               <!-- fork:如果没有该配置 ，devtool不会起作用，即应用不会restart -->
+                <configuration>
+                	<fork>true</fork>
+                </configuration>
+            </plugin>
+        </plugins>
+  </build>
+  
+</project>

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-Title: SpringBootDemo Maven Webapp
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.imooc.demo
+Build-Jdk: 1.7.0_80
+Built-By: dell
+Created-By: Maven Integration for Eclipse
+Implementation-URL: http://maven.apache.org
+
